@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SportShopDB" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-K0H6TSU4;Initial Catalog=SportShopDB;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SportShopDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Shoes" Member="Shoes">
+    <Type Name="Shoe">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShoeType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IfDiscount" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LinkImage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ViewManager";
+}
+
+<h2>ViewManager</h2>
+
+<table border="1"style="padding:5px">
+    <tr>
+
+        <th>ID</th>
+        <th>ShopType</th>
+        <th>Company</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>IfDiscount</th>
+        <th>LinkImage</th>
+    </tr>
+
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.ShoeType</td>
+                <td>@item.Company</td>
+                <td>@item.Model</td>
+                <td>@item.Price</td>
+                <td>@item.Amount</td>
+                <td>@item.IfDiscount</td>
+                <td>@item.LinkImage</td>
+            </tr>
+
+        }
+    }
+
+</table>
+@using (Html.BeginForm("Shoes", "SportShop"))
+{
+<button>Repeat To List >></button>
+}

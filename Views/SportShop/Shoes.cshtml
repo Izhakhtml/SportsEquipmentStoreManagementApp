@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Shoes";
+}
+
+<body style="background:gray">
+   
+    <h1 style="text-align:center;">Shoes</h1>
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
+        @{
+
+            foreach (var item in Model)
+            {
+                <article>
+                    <h2 style="text-align:center;">@item.Company</h2>
+                    <img style="width:350px;height:300px;" src="@item.LinkImage" />
+                    <h3>Shoe Type: @item.ShoeType</h3>
+                    <h3>Price: @item.Price</h3>
+                </article>
+            }
+
+        }
+
+    </div>
+
+    @using (Html.BeginForm("ViewManager", "SportShop"))
+    {
+        <button>View Manager</button>
+    }
+
+    @using (Html.BeginForm("OnlyDiscount", "SportShop"))
+    {
+        <button>Only Discount</button>
+    }
+</body>
