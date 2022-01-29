@@ -18,6 +18,11 @@ namespace SportsEquipmentStoreManagementApp
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-        }
+            //routes.MapRoute(
+            //"SportShop",
+            //"SportShop/{action}/{firstItem}",
+            //new { controller = "Inventory", action = "ListAll", firstItem = UrlParameter.Optional }
+            //);
+        }   
     }
 }

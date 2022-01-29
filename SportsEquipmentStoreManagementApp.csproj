@@ -50,12 +50,20 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -134,11 +142,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\api\DressingController.cs" />
+    <Compile Include="Controllers\api\PantsController.cs" />
+    <Compile Include="Controllers\api\ShirtsController.cs" />
+    <Compile Include="Controllers\api\ShoesController.cs" />
+    <Compile Include="Controllers\api\SportEController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SportShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Buttons.cs" />
     <Compile Include="Models\DataClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,12 +208,40 @@
     <Content Include="Views\SportShop\Shoes.cshtml" />
     <Content Include="Views\SportShop\Index.cshtml" />
     <Content Include="Views\SportShop\ViewManager.cshtml" />
-    <Content Include="Views\SportShop\OnlyDiscount.cshtml" />
-    <Content Include="Views\SportShop\FilteringByFields.cshtml" />
+    <Content Include="Views\SportShop\OnlyDiscountShoes.cshtml" />
+    <Content Include="Views\SportShop\Shirts.cshtml" />
+    <Content Include="Views\SportShop\OnlyLongShirts.cshtml" />
+    <Content Include="Views\SportShop\OnlyShortShirts.cshtml" />
+    <Content Include="Views\SportShop\ViewManagerShirt.cshtml" />
+    <Content Include="Views\SportShop\OnlyDrifitShirts.cshtml" />
+    <Content Include="Views\SportShop\SortByPriceShirts.cshtml" />
+    <Content Include="Views\Home\TestFun.cshtml" />
+    <Content Include="Views\Buttons\Index.cshtml" />
+    <Content Include="Views\Home\Index3.cshtml" />
+    <Content Include="Views\Home\Index31.cshtml" />
+    <Content Include="Views\Home\Index4.cshtml" />
+    <Content Include="Views\SportShop\Pants.cshtml" />
+    <Content Include="Views\SportShop\ViewManagerPants.cshtml" />
+    <Content Include="Views\SportShop\OnlyShortPants.cshtml" />
+    <Content Include="Views\SportShop\OnlyLongPants.cshtml" />
+    <Content Include="Views\SportShop\OnlytDrifitPants.cshtml" />
+    <Content Include="Views\SportShop\SortByPricePants.cshtml" />
+    <Content Include="Views\SportShop\SportEquipment.cshtml" />
+    <Content Include="Views\SportShop\ViewManagerSE.cshtml" />
+    <Content Include="Views\SportShop\OnlyFootball.cshtml" />
+    <Content Include="Views\SportShop\OnlyBasketball.cshtml" />
+    <Content Include="Views\SportShop\SortByPriceSE.cshtml" />
+    <Content Include="Views\SportShop\SortByPriceShoes.cshtml" />
+    <Content Include="Views\SportShop\SortByAmountShoes.cshtml" />
+    <Content Include="Views\SportShop\SortByAmountShirts.cshtml" />
+    <Content Include="Views\SportShop\SortByAmountPants.cshtml" />
+    <Content Include="Views\SportShop\SortByAmountSE.cshtml" />
+    <Content Include="Views\SportShop\RunningType.cshtml" />
+    <Content Include="Views\SportShop\WalkType.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\api\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

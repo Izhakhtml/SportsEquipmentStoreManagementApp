@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        @*@using (Html.BeginForm("TestFun", "Home"))
+        {
+            <label>Person id</label>
+            @Html.TextBoxFor(m => m.PersonId);
+            <label>FirstName</label>
+            @Html.TextBoxFor(m => m.FirstName);
+            <label>Age</label>
+            @Html.TextBoxFor(m => m.Age);
+            <label>Gender</label>
+            @Html.DropDownListFor(m=>m.Gender,new List<SelectListItem>
+            {
+            new SelectListItem{Text="Male",Value="M"},
+            new SelectListItem{Text="Female",Value="F"}
+            },"Select Please")
+            <input value="Submit"type="submit"/>
+        }*@
+        @*<form method="get" action="~/Home/Index3">
+            <table>
+                <tr>
+                    <td>Enter First Name</td>
+                    <td><input type="text" id="fname_id" name="fname_name" /></td>
+                </tr>
+                <tr>
+                    <td>Enter Last Name</td>
+                    <td><input type="text" id="lname_id" name="lname_name" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" /></td>
+                </tr>
+            </table>
+        </form>*@
+
+
+    </div>
+</body>
+</html>

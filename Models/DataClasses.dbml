@@ -12,4 +12,38 @@
       <Column Name="LinkImage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SportsEquipment" Member="SportsEquipments">
+    <Type Name="SportsEquipment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SportType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LinkToImage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Team_SportsEquipment" Member="Team" ThisKey="TeamID" OtherKey="Id" Type="Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Teams" Member="Teams">
+    <Type Name="Team">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameTeam" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Team_SportsEquipment" Member="SportsEquipments" ThisKey="Id" OtherKey="TeamID" Type="SportsEquipment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dressing" Member="Dressings">
+    <Type Name="Dressing">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeOfGarment" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IfIsShort" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IfIsDrifit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LinkToImage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

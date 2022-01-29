@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Shirts";
+}
+<body style="background: rgb(214, 206, 206)">
+         <h1 style="border-bottom:2px dotted black;border-bottom-width:5px;text-align:center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:50px">Shirts</h1>
+         <div style="display:flex;flex-wrap:wrap;justify-content:center">
+
+        @using (Html.BeginForm("Shirts", "SportShop"))
+        {
+            <select name="value" style="padding:10px;border-radius:5px;">
+                <option style="display:none">Sort by:</option>
+                <option value="1">PRICE</option>
+                <option value="2">AMOUNT</option>
+            </select>
+            <input type="submit" value="Sort" style="margin:15px;padding:10px;border-radius:10px;" />
+        }
+        @using (Html.BeginForm("Shirts", "SportShop")) // 2
+        {
+            <select name="value" style="padding:10px;border-radius:5px;">
+                <option style="display:none">Filtering by:</option>
+                <option value="3">Long Shirts</option>
+                <option value="4">Short Shirts</option>
+                <option value="5">Drifit Shirts</option>
+            </select>
+            <input type="submit" value="Filter" style="margin:15px;padding:10px;border-radius:10px;" />
+        }
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
+            @{
+                foreach (var item in Model)
+                {
+
+                    <article>
+                        <h2 style="text-align:center;">@item.Company</h2>
+                        <img style="width:350px;height:300px;" src="@item.LinkToImage" />
+                        <h3>Shoe Type: @item.TypeOfGarment</h3>
+                        <h3>Price: @item.Price</h3>
+                    </article>
+                }
+            }
+
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;">
+
+            @*@using (@Html.BeginForm("OnlyLongShirts", "SportShop"))
+            {
+                <button style="margin:15px;padding:10px;border-radius:10px;"> Long Shirts</button>
+            }
+            @using (@Html.BeginForm("OnlyShortShirts", "SportShop"))
+            {
+                <button style="margin:15px;padding:10px;border-radius:10px;"> Short Shirts</button>
+            }*@
+            @using (@Html.BeginForm("ViewManagerShirt", "SportShop"))
+            {
+                <button style="margin:15px;padding:10px;border-radius:10px;">View Manager Shirt</button>
+            }
+            @*@using (@Html.BeginForm("OnlyShortDrifitShirts", "SportShop"))
+            {
+                <button style="margin:15px;padding:10px;border-radius:10px;"> Drifit </button>
+            }*@
+
+        </div>
+</body>

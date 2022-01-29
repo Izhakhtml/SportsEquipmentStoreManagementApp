@@ -1,22 +1,22 @@
 ﻿
 @{
-    ViewBag.Title = "ViewManager";
+    ViewBag.Title = "ViewManagerPants";
 }
-
-
 <body style="background: rgb(214, 206, 206)">
     <h1 style="border-bottom:2px dotted black;border-bottom-width:5px;text-align:center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:50px">Manager View</h1>
     <table border="1" style="margin:10px; padding:10px;background:gray;color:white;width:1000px;height:500px">
         <tr>
 
             <th style="border:2px solid rgb(214, 206, 206); padding:10px;">ID</th>
-            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">ShopType</th>
+            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">TypeOfGarment</th>
+            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">Gender</th>
             <th style="border:2px solid rgb(214, 206, 206); padding:10px;">Company</th>
             <th style="border:2px solid rgb(214, 206, 206); padding:10px;">Model</th>
             <th style="border:2px solid rgb(214, 206, 206); padding:10px;">Price</th>
             <th style="border:2px solid rgb(214, 206, 206); padding:10px;">Amount</th>
-            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">IfDiscount</th>
-            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">LinkImage</th>
+            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">IfIsShort</th>
+            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">IfIsDrifit</th>
+            <th style="border:2px solid rgb(214, 206, 206); padding:10px;">LinkToImage</th>
         </tr>
 
         @{
@@ -24,20 +24,22 @@
             {
                 <tr>
                     <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.Id</td>
-                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.ShoeType</td>
+                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.TypeOfGarment</td>
+                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.Gender</td>
                     <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.Company</td>
                     <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.Model</td>
                     <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.Price</td>
                     <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.Amount</td>
-                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.IfDiscount</td>
-                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.LinkImage</td>
+                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.IfIsShort</td>
+                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.IfIsDrifit</td>
+                    <td style="border:2px solid rgb(214, 206, 206); padding:10px;">@item.LinkToImage</td>
                 </tr>
 
             }
         }
 
     </table>
-    @using (Html.BeginForm("Shoes", "SportShop"))
+    @using (Html.BeginForm("Pants", "SportShop"))
     {
         <button style="margin:15px;padding:10px;border-radius:10px;">Repeat To List >></button>
     }
